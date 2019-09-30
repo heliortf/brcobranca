@@ -183,7 +183,7 @@ module Brcobranca
           doc.show "#{boleto.sacado} - #{boleto.sacado_documento.formata_documento}"
 
           move_more(doc, 0, -0.3)
-          doc.show "#{boleto.sacado_endereco}"
+          doc.show "#{boleto.sacado_endereco} #{boleto.sacado_endereco_complemento}"
           if boleto.demonstrativo
             doc.text_area boleto.demonstrativo, width: '18.5 cm', text_align: :left, x: "#{@x - 0.8} cm", y: "#{@y - 0.9} cm", row_height: '0.4 cm'
           end
@@ -284,9 +284,9 @@ module Brcobranca
           doc.show "#{boleto.sacado} - CPF/CNPJ: #{boleto.sacado_documento.formata_documento}" if boleto.sacado && boleto.sacado_documento
 
           move_more(doc, 0, -0.4)
-          doc.text "#{boleto.sacado_endereco}"
+          doc.show "#{boleto.sacado_endereco}"
           move_more(doc, 0, -0.4)
-          doc.text "#{boleto.sacado_endereco_complemento}"
+          doc.show "#{boleto.sacado_endereco_complemento}" if boleto.sacado_endereco_complemento
 
           move_more(doc, 1.2, -0.93)
           if boleto.avalista && boleto.avalista_documento
