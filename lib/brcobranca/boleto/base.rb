@@ -107,7 +107,9 @@ module Brcobranca
           especie: 'R$',
           aceite: 'S',
           valor: 0.0,
-          local_pagamento: 'QUALQUER BANCO ATÉ O VENCIMENTO'
+          local_pagamento: 'QUALQUER BANCO ATÉ O VENCIMENTO',
+          sacado_endereco: '',
+          sacado_endereco_complemento: ''
         }
 
         campos = padrao.merge!(campos)
