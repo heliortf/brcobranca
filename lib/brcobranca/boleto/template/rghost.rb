@@ -284,7 +284,9 @@ module Brcobranca
           doc.show "#{boleto.sacado} - CPF/CNPJ: #{boleto.sacado_documento.formata_documento}" if boleto.sacado && boleto.sacado_documento
 
           move_more(doc, 0, -0.4)
-          doc.show "#{boleto.sacado_endereco}"
+          doc.text "#{boleto.sacado_endereco}"
+          move_more(doc, 0, -0.4)
+          doc.text "#{boleto.sacado_endereco_complemento}"
 
           move_more(doc, 1.2, -0.93)
           if boleto.avalista && boleto.avalista_documento
