@@ -80,6 +80,8 @@ module Brcobranca
       attr_accessor :sacado
       # <b>OPCIONAL</b>: Endereco do pagador
       attr_accessor :sacado_endereco
+      # <b>OPCIONAL</b>: Complemento do endereco do sacado
+      attr_accessor :sacado_endereco_complemento
       # <b>REQUERIDO</b>: Documento do pagador
       attr_accessor :sacado_documento
       # <b>OPCIONAL</b>: Nome do avalista
