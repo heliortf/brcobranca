@@ -215,10 +215,10 @@ module Brcobranca
           if boleto.cedente_endereco
             doc.show boleto.cedente_endereco
             move_more(doc, 1.2, 0.3)
-            doc.show boleto.cedente
+            doc.show "#{boleto.cedente} (CPF/CNPJ: #{boleto.documento_cedente.formata_documento})"
             move_more(doc, -1.2, -0.3)
           else
-            doc.show boleto.cedente
+            doc.show "#{boleto.cedente} (CPF/CNPJ: #{boleto.documento_cedente.formata_documento})"
           end
 
           move_more(doc, 15.8, 0)
